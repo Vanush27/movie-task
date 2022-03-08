@@ -1,0 +1,171 @@
+@import './../../styles/variable.scss';
+
+
+.nav {
+  font-family: $default-font;
+  width: 116px;
+  height: 100vh;
+  margin-right: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  position: fixed;
+
+  &.nav_opens {
+
+    width: 100%;
+    background: black;
+    opacity: 0.8;
+    justify-content: flex-start;
+    z-index: 99999;
+
+    .menu {
+      width: 300px;
+
+      .avatar {
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+
+        p {
+          font-size: 32px;
+          font-weight: bold;
+          color: white;
+          padding: 15px;
+        }
+      }
+
+      .other-info {
+        display: block;
+        margin-top: 200px;
+
+        a {
+          font-weight: 400;
+          font-size: 24px;
+          color: #858688;
+          text-transform: uppercase;
+          font-family: $default-font;
+
+          &:hover {
+            background: transparent;
+          }
+        }
+      }
+
+
+      a {
+
+        &:hover {
+          background: $blueColor;
+          border-radius: 10px;
+
+
+          p {
+            font-weight: 600;
+          }
+        }
+
+        p {
+          display: block;
+          color: $whiteColor;
+
+        }
+      }
+    }
+  }
+
+
+  .menu {
+    width: 100%;
+    padding-left: 30px;
+    margin-bottom: 200px;
+
+    .icon {
+
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+
+      &:hover {
+        background: #3B486D;
+      }
+    }
+
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 25px;
+
+      p {
+        display: none;
+        font-family: $default-font;
+        font-size: 36px;
+
+      }
+
+    }
+
+    .other-info {
+      display: none;
+
+    }
+
+    .avatar {
+      display: none;
+    }
+
+  }
+
+
+}
+
+@media screen and (max-width: 1480px) {
+  .nav {
+    &.nav_opens {
+      .menu {
+
+
+        .avatar {
+          margin-top: 30px;
+          margin-bottom: 20px;
+
+          p {
+            font-size: 20px;
+            padding: 8px;
+          }
+        }
+
+        .other-info {
+          margin-top: 20px;
+
+          a {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .menu {
+      margin-bottom: 0;
+
+
+      a {
+        margin-bottom: 6px;
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+}
